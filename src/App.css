@@ -1,3 +1,20 @@
+html {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+body {
+  min-width: fit-content;
+}
+
+
 .App {
   text-align: center;
 }
@@ -47,6 +64,8 @@
   background-color: white;
   color: black;
   flex-wrap: wrap;
+
+
 }
 
 .navbar ul {
@@ -58,17 +77,37 @@
 }
 
 .navbar li {
+  display: flex;
+  flex: 1;
   margin: 0 15px;
+  align-items: center;
+}
+
+li a {
+  text-decoration: none;
+  color: black;
+  font-weight: 700;
+  font-family: "Karla", sans-serif;
+
+}
+li a:hover {
+  color: #495E57;
+  text-decoration: underline;
 }
 
 
 
+footer {
+
+}
 
 .footer {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: flex-start;
+  background-color: #495E57;
+  color: #F4CE14;
 
 }
 .footer ul {
@@ -78,4 +117,57 @@
 }
 footer img {
   align-self: flex-start;
+  background-color: white;
+  padding: 10px;
 }
+footer ul li a {
+  color: white;
+}
+footer ul li a:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+
+
+
+.yellowbutton {
+  background-color: #F4CE14;
+  color: black;
+  padding: 10px 20px;
+  border-radius: 16px;
+  border: none;
+  font-size: 16px;
+  font-weight: bold;
+}
+.yellowbutton:hover {
+  background-color: #d9b712;
+}
+
+h1 {
+  font-family: "Markazi Text", serif;
+  font-size: 64px;
+  font-weight: 600;
+  margin: 0;
+  color: #F4CE14;
+}
+
+h2 {
+  font-family: "Markazi Text", serif;
+  font-size: 64px;
+  font-weight: 500;
+  margin: 0;
+  color: white;
+}
+p {
+  font-family: "Karla", serif;
+  font-size: 24px;
+  font-weight: 500;
+  color: white;
+}
+
+.greenbg {
+  background-color: #495E57;
+}
+
+

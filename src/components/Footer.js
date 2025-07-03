@@ -10,25 +10,25 @@ export default function Footer() {
 </ul>
             <ul>
 
-                <h3><a>navigation</a></h3>
-                <li><a href={"#"}>home</a></li>
-                <li><a href={"#"}>about</a></li>
-                <li><a href={"#"}>reservations</a></li>
-                <li><a href={"#"}>order online</a></li>
-                <li><a href={"#"}>login</a></li>
+                <h3><a>Navigation</a></h3>
+                <li><a href={"#"}>Home</a></li>
+                <li><a href={"#"}>About</a></li>
+                <li><a href={"#"}>Reservations</a></li>
+                <li><a href={"#"}>Order online</a></li>
+                <li><a href={"#"}>Login</a></li>
 
             </ul>
             <ul>
-                <h3>contact</h3>
-                <li><a href={"#"}>address</a></li>
-                <li><a href={"#"}>phone</a></li>
-                <li><a href={"#"}>e-mail</a></li>
+                <h3>Contact</h3>
+                <li><a href={"#"}>Address</a></li>
+                <li><a href={"#"}>Phone</a></li>
+                <li><a href={"#"}>E-mail</a></li>
             </ul>
             <ul>
-                <h3>social media links</h3>
-                <li><a href={"#"}>instagram</a></li>
-                <li><a href={"#"}>tiktok</a></li>
-                <li><a href={"#"}>twitter</a></li>
+                <h3>Social media links</h3>
+                <li><a href={"#"}>Instagram</a></li>
+                <li><a href={"#"}>Tiktok</a></li>
+                <li><a href={"#"}>Twitter</a></li>
             </ul>
         </footer>)
 }
