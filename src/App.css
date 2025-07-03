@@ -36,3 +36,46 @@
     transform: rotate(360deg);
   }
 }
+
+
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: white;
+  color: black;
+  flex-wrap: wrap;
+}
+
+.navbar ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar li {
+  margin: 0 15px;
+}
+
+
+
+
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+
+}
+.footer ul {
+  padding-left: 20px;
+  padding-right: 20px;
+  list-style: none;
+}
+footer img {
+  align-self: flex-start;
+}
