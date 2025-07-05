@@ -11,7 +11,7 @@ export default function Main() {
             </div>
 
             <div>
-                <img src={"./restauranfood.jpg"} alt={"food"} height={"450vh"}/>
+                <img id={"heroimg"} src={"./restauranfood.jpg"} alt={"food"} height={"450vh"}/>
             </div>
 
         </div>
