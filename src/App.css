@@ -8,6 +8,9 @@ html {
 *::after {
     -webkit-box-sizing: inherit;
     box-sizing: inherit;
+
+    text-decoration: none;
+
 }
 
 body {
@@ -19,8 +22,6 @@ html, body {
     overscroll-behavior-y: none;
     overscroll-behavior-x: none;
 }
-
-
 
 
 .App {
@@ -71,6 +72,7 @@ html, body {
     background-color: white;
     color: black;
     flex-wrap: wrap;
+    border-bottom: solid black 2px;
 
 
 }
@@ -88,6 +90,7 @@ html, body {
     flex: 1;
     margin: 0 15px;
     align-items: center;
+
 }
 
 li a {
@@ -207,7 +210,7 @@ div img {
 }
 
 #heroimg {
-    box-shadow: 0px 0px 48px 5px rgba(0,0,0,0.7);
+    box-shadow: 0px 0px 48px 5px rgba(0, 0, 0, 0.7);
 
 }
 
@@ -245,7 +248,7 @@ div img {
 
 .card {
     background-color: #e7e7e7;
-    margin: 0  15px 15px;
+    margin: 0 15px 15px;
     border-radius: 16px;
     width: 300px;
 }
@@ -264,7 +267,6 @@ h3 + p {
 }
 
 
-
 .blackbutton {
     background-color: black;
     color: white;
@@ -276,8 +278,8 @@ h3 + p {
 }
 
 .blackbutton:hover {
-background-color: #F4CE14 ;
-    color:#000000;
+    background-color: #F4CE14;
+    color: #000000;
 }
 
 
@@ -292,8 +294,6 @@ background-color: #F4CE14 ;
     border-radius: 16px 16px 0 0;
 
 }
-
-
 
 
 .cardbody {
@@ -333,12 +333,10 @@ p {
     font-weight: bold;
     display: flex;
 }
+
 .orderbutton:hover {
     background-color: #495E57;
 }
-
-
-
 
 
 .testimonals {
@@ -348,7 +346,7 @@ p {
 }
 
 
-.testimonalsec{
+.testimonalsec {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -358,7 +356,7 @@ p {
 .reviews {
     display: flex;
     flex-direction: row;
-    align-items:start ;
+    align-items: start;
     justify-content: center;
     flex-wrap: wrap;
 
@@ -372,7 +370,6 @@ p {
     width: 220px;
     color: black;
 }
-
 
 
 .comment {
@@ -391,9 +388,10 @@ p {
 }
 
 
-.about h1, .about p, .about h2{
+.about h1, .about p, .about h2 {
     color: black;
 }
+
 .about h2 {
     font-size: 40px;
 }
@@ -405,13 +403,72 @@ p {
 
 #mike1 {
     margin-right: -80px;
-    box-shadow: 0px 0px 48px 5px rgba(0,0,0,0.7);
+    box-shadow: 0px 0px 48px 5px rgba(0, 0, 0, 0.7);
 
 }
 
 #mike2 {
     margin-right: -80px;
     margin-top: 50px;
-    box-shadow: 0px 0px 48px 5px rgba(0,0,0,0.7);
+    box-shadow: 0px 0px 48px 5px rgba(0, 0, 0, 0.7);
 
+}
+
+
+#Menu img {
+
+}
+
+#Menu {
+    display: flex;
+    flex-direction: column;
+}
+
+#MenuImg {
+    border-radius: 0;
+    align-self: center;
+    width: 600px;
+    padding: 0;
+    flex-wrap: wrap;
+}
+
+
+.login {
+    display: flex;
+    flex-direction: column;
+    height: 660px;
+    justify-content: center;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    height: 400px;
+    background-color: #495E57;
+    padding: 15px;
+    border-radius: 16px;
+    align-self: center;
+    justify-self: center;
+    color: white;
+
+
+}
+
+.form input {
+    display: flex;
+    margin: 15px;
+    height: 25px;
+    width: 180px;
+    justify-self: center;
+}
+
+.form button {
+    align-self: center;
+}
+
+.form a {
+    text-decoration: none;
+    color: white;
+    margin-top: -15px;
 }

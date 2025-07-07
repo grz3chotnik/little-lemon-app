@@ -1,3 +1,5 @@
+import {Link} from "react-router-dom";
+
 export default function Footer() {
     return (
 
@@ -6,16 +8,16 @@ export default function Footer() {
 
 
 <ul>
-    <li><img src={"./logo2.png"} alt={"logo"} height={"145vh"} className={"footerimg"}/></li>
+    <li><img src={"./logo2.png"} alt={"logo"} height={"145vh"} className={"footerimgw"}/></li>
 </ul>
             <ul>
 
                 <h3><a>Navigation</a></h3>
-                <li><a href={"#"}>Home</a></li>
-                <li><a href={"#"}>About</a></li>
-                <li><a href={"#"}>Reservations</a></li>
-                <li><a href={"#"}>Order online</a></li>
-                <li><a href={"#"}>Login</a></li>
+                <li><Link to={"/"}>Home</Link></li>
+                <li><Link to={"/Aboutpage"}>About</Link></li>
+                <li><Link to={"/Reservations"} >Reservations</Link></li>
+                <li><Link to={"/Orderonline"}>Order online</Link></li>
+                <li><Link to={"/Login"}>Login</Link></li>
 
             </ul>
             <ul>
@@ -23,6 +25,9 @@ export default function Footer() {
                 <li><a href={"#"}>Address</a></li>
                 <li><a href={"#"}>Phone</a></li>
                 <li><a href={"#"}>E-mail</a></li>
+
+
+
             </ul>
             <ul>
                 <h3>Social media links</h3>
