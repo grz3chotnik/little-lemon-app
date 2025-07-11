@@ -10,10 +10,10 @@ export default function Login () {
 
             <div className={"form"}>
                 <h3>Log in into your Little Lemon Account</h3>
-                <label>username<input/></label>
-                <label>email<input/></label>
-                <label>password<input/></label>
-                <a href={"#"}>forgot password?</a>
+                <label><input />username</label>
+                <label><input/>email</label>
+                <label><input/>password</label>
+                <a href={"/reset"}>forgot password?</a>
                 <button className={"yellowbutton"}>Log In</button>
 
             </div>

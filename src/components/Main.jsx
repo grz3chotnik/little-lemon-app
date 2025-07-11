@@ -1,3 +1,5 @@
+import {Link} from "react-router-dom";
+
 export default function Main() {
     return (<main>
 
@@ -6,8 +8,9 @@ export default function Main() {
                 <h2>Chicago</h2>
                 <p>We are a family owned Mediterraneran restaurant, <br/> focused on traditional recipes served with a
                     modern twist.</p>
-                <button className={"yellowbutton"}>Reserve a table</button>
-
+                <Link to={"/Reservations"}>
+                        <button className={"yellowbutton"}>Reserve a table</button>
+                </Link>
             </div>
 
             <div>
@@ -21,7 +24,7 @@ export default function Main() {
                 <h1>This week's specials</h1>
 
                 <div>
-                    <button className={"yellowbutton"}>Online menu</button>
+                    <Link to={"/Orderonline"}><button className={"yellowbutton"}>Online menu</button></Link>
                 </div>
             </div>
 
