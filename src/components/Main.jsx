@@ -1,6 +1,25 @@
 import {Link} from "react-router-dom";
+import {useEffect} from "react";
 
+import {useLocation} from "react-router-dom";
 export default function Main() {
+
+    const hash = useLocation();
+    useEffect(() => {
+        if (hash.hash === '#about') {
+            const element = document.getElementById('about');
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+    }, [hash]);
+
+
+console.log(hash)
+
+
+
+
     return (<main>
 
         <div className={"herosection"}>

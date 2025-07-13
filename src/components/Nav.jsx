@@ -15,7 +15,8 @@ export default function Nav() {
 
                 <li><Link to={"/"}><img src={"./Logo.svg"} alt={"logo"} height={"100%"}/></Link></li>
                 <li><Link to={"/"}>Home</Link></li>
-                <li><Link to={"/Aboutpage"}>About</Link></li>
+                <li><Link to={"/#about"}>About</Link></li>
+                {/*<li><a href={"/#about"}>About</a></li>*/}
                 <li><Link to={"/Menu"}>Menu</Link></li>
                 <li><Link to={"/Reservations"}>Reservations</Link></li>
                 <li><Link to={"/Orderonline"}>Order online</Link></li>

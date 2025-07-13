@@ -2,7 +2,7 @@ export default function About() {
 
     return (
 
-        <div className={"about"}>
+        <div className={"about"} id={"about"}>
 
             <div>
                 <h1>Little Lemon</h1>

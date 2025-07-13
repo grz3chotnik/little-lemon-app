@@ -14,7 +14,7 @@ export default function Footer() {
 
                 <h3><a>Navigation</a></h3>
                 <li><Link to={"/"}>Home</Link></li>
-                <li><Link to={"/Aboutpage"}>About</Link></li>
+                <li><Link to={"/#about"}>About</Link></li>
                 <li><Link to={"/Reservations"} >Reservations</Link></li>
                 <li><Link to={"/Orderonline"}>Order online</Link></li>
                 <li><Link to={"/Login"}>Login</Link></li>
@@ -22,18 +22,18 @@ export default function Footer() {
             </ul>
             <ul>
                 <h3>Contact</h3>
-                <li><a href={"#"}>Address</a></li>
-                <li><a href={"#"}>Phone</a></li>
-                <li><a href={"#"}>E-mail</a></li>
+                <li><a href={"xyz.com"}>Address</a></li>
+                <li><a href={"xyz.com"}>Phone</a></li>
+                <li><a href={"xyz.com"}>E-mail</a></li>
 
 
 
             </ul>
             <ul>
                 <h3>Social media links</h3>
-                <li><a href={"#"}>Instagram</a></li>
-                <li><a href={"#"}>Tiktok</a></li>
-                <li><a href={"#"}>Twitter</a></li>
+                <li><a href={"xyz.com"}>Instagram</a></li>
+                <li><a href={"xyz.com"}>Tiktok</a></li>
+                <li><a href={"xyz.com"}>Twitter</a></li>
             </ul>
         </footer>)
 }
