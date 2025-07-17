@@ -556,14 +556,15 @@ label input {
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    justify-self: center;
     flex-wrap: wrap;
     background-color: #495E57;
-    width: 800px;
-    height: 450px;
+    width: 90%;
+    max-width: 800px;
+    min-height: 450px;
     padding: 15px;
     border-radius: 16px;
     color: white;
+
     /*box-shadow: 0px 0px 20px 1px rgba(0, 0, 0, 0.7);*/
 
 }
@@ -598,10 +599,10 @@ select {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin: 0 0 90px;
+    margin: 0 0 150px;
 }
     .reservelayout input, .reservelayout select {
-        margin: 10px 10px 0;
+        margin: 5px 10px 10px;
         width: 180px;
         height: 45px;
         font-size: 20px;
@@ -630,9 +631,15 @@ select {
     .row3 {
   align-items: center;
         justify-content: center;
+
     }
 
 
+
+    /*div .row1 {*/
+    /*    align-items: center;*/
+    /*    justify-content: center;*/
+    /*}*/
 /*.row1 input, .row2 input, .row3 input{*/
 
 /*    font-size: 50px;*/
