@@ -2,6 +2,7 @@ import {Link} from "react-router-dom";
 import {useEffect} from "react";
 
 import {useLocation} from "react-router-dom";
+
 export default function Main() {
 
     const hash = useLocation();
@@ -9,15 +10,13 @@ export default function Main() {
         if (hash.hash === '#about') {
             const element = document.getElementById('about');
             if (element) {
-                element.scrollIntoView({ behavior: 'smooth' });
+                element.scrollIntoView({behavior: 'smooth'});
             }
         }
     }, [hash]);
 
 
-console.log(hash)
-
-
+    console.log(hash)
 
 
     return (<main>
@@ -28,7 +27,7 @@ console.log(hash)
                 <p>We are a family owned Mediterraneran restaurant, <br/> focused on traditional recipes served with a
                     modern twist.</p>
                 <Link to={"/Reservations"}>
-                        <button className={"yellowbutton"}>Reserve a table</button>
+                    <button className={"yellowbutton"}>Reserve a table</button>
                 </Link>
             </div>
 
@@ -43,7 +42,9 @@ console.log(hash)
                 <h1>This week's specials</h1>
 
                 <div>
-                    <Link to={"/Orderonline"}><button className={"yellowbutton"}>Online menu</button></Link>
+                    <Link to={"/Orderonline"}>
+                        <button className={"yellowbutton"}>Online menu</button>
+                    </Link>
                 </div>
             </div>
 

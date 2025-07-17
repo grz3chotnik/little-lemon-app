@@ -159,11 +159,18 @@ footer .footerimg {
     font-weight: bold;
     height: 60px;
     transition: 0.2s;
+
 }
 
 .yellowbutton:hover {
     background-color: #debb13;
     transform: scale(1.02);
+
+}
+
+.yellowbutton:disabled {
+    background-color: #969696;
+    color: #626262;
 
 }
 

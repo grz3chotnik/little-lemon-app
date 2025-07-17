@@ -5,6 +5,7 @@ import Main from './components/Main';
 import Footer from './components/Footer';
 import Testimonals from "./components/Testimonals";
 import About from "./components/About";
+import { useState } from "react";
 import { Routes, Route } from 'react-router-dom';
 import { BrowserRouter } from 'react-router-dom';
 import Reservations from "./components/Reservations"
@@ -16,6 +17,9 @@ import Orderonline from "./components/Orderonline";
 import Aboutpage from "./components/Aboutpage";
 
 function App() {
+
+
+
     return (
 
         <>
