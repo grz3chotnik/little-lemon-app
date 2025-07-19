@@ -1,7 +1,7 @@
 import {useState} from "react";
 import AvailableTimes from "./AvailableTimes";
 
-export default function ReservationForm() {
+export default function ReservationForm({availabletimes}) {
 
 
     const [firstname, setFirstname] = useState("")
@@ -12,14 +12,13 @@ export default function ReservationForm() {
     const [time, setTime] = useState("")
     const [occasion, setOccasion] = useState("")
     const [nopeople, setNopeople] = useState("")
-    // const [availableTimes, setAvailableTimes] = useState(["10:00", "12:00", "14:00", "16:00", "18:00"])
 
 
     const [isDisabled, setIsDisabled] = useState(true);
 
     const handleSubmit = (e) => {
-        setIsDisabled(false);
         e.preventDefault();
+        setIsDisabled(false);
         console.log("FORM SUBMITTED")
         console.log(date)
         console.log(time)
@@ -27,7 +26,7 @@ export default function ReservationForm() {
         console.log(lastname)
         console.log(email)
         console.log(phonenumber)
-        console.log(nopeople)
+        console.log(nopeople + " people")
         console.log(occasion)
 
     }
@@ -85,7 +84,7 @@ export default function ReservationForm() {
                         value={time}
                         required={true}
                         onChange={(e) => setTime(e.target.value)}>
-                    <AvailableTimes/>
+                    <AvailableTimes availabletimes={availabletimes} date={date}/>
                 </select>
 
                 <label htmlFor={"occasion"}>Occasion</label>
@@ -126,10 +125,11 @@ export default function ReservationForm() {
             <button type={"submit"}
                     className={"yellowbutton"}
                     disabled={!isDisabled}
-            >Reserve a table
+            >Reserve
             </button>
 
         </form>
-
+        <button onClick={() => {console.log(date)}}> date testtt</button>
+        <button onClick={() => {console.log(new Date(date).getDay())}}> date test 2</button>
     </div>)
 }

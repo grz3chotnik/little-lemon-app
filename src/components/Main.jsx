@@ -21,7 +21,7 @@ export default function Main() {
 
     return (<main>
 
-        <div className={"herosection"}>
+        <div className="herosection">
             <div><h1>Little Lemon</h1>
                 <h2>Chicago</h2>
                 <p>We are a family owned Mediterraneran restaurant, <br/> focused on traditional recipes served with a
