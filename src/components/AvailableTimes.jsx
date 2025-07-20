@@ -1,4 +1,4 @@
-import {useState} from "react";
+import {useEffect, useState} from "react";
 
 export default function AvailableTimes({availabletimes, date}) {
 
@@ -6,14 +6,17 @@ export default function AvailableTimes({availabletimes, date}) {
     //     ["10:00", "12:00", "14:00", "16:00", "18:00"])
 
 
-    // const isWeekend = new Date(date.value).getDay() === 6 || new Date(date.value).getDay() === 5;
-    // const isWeekend = (dateString) => {
-    //     const dateObj = new Date(dateString);
-    //     const day = dateObj.getDay();
-    //     return day === 5 || day === 6;
-    // };
+    // useEffect(() => {
+    //     fetch("https://raw.githubusercontent.com/courseraap/capstone/main/api.js")
+    //         .then(response => response.json())
+    //         .then(data => )
+    // }, []);
 
-    if (new Date(date).getDay() === 5|| new Date(date).getDay() === 6) {
+
+let currentdate = new Date(date);
+
+
+    if (currentdate.getDay() === 5 || 6) {
         return [
             <option>10:00</option>,
             <option>11:00</option>,

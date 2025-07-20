@@ -78,9 +78,9 @@ export default function ReservationForm({availabletimes}) {
             <div className={"row2"}>
                 {/*<form></form>*/}
 
-                <label htmlFor={"time"}>time</label>
-                <select id={"time"}
-                        placeholder={"Time"}
+                <label htmlFor="time">time</label>
+                <select id="time"
+                        placeholder="time"
                         value={time}
                         required={true}
                         onChange={(e) => setTime(e.target.value)}>
