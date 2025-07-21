@@ -1,7 +1,12 @@
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import AvailableTimes from "./AvailableTimes";
+import {submitAPI} from "./Api";
+import {useNavigate} from "react-router-dom";
 
 export default function ReservationForm({availabletimes}) {
+
+
+    const navigate = useNavigate();
 
 
     const [firstname, setFirstname] = useState("")
@@ -13,23 +18,96 @@ export default function ReservationForm({availabletimes}) {
     const [occasion, setOccasion] = useState("")
     const [nopeople, setNopeople] = useState("")
 
+    const [submissionFailed, setSubmissionFailed] = useState(false);
 
     const [isDisabled, setIsDisabled] = useState(true);
 
+
     const handleSubmit = (e) => {
         e.preventDefault();
-        setIsDisabled(false);
-        console.log("FORM SUBMITTED")
-        console.log(date)
-        console.log(time)
-        console.log(firstname)
-        console.log(lastname)
-        console.log(email)
-        console.log(phonenumber)
-        console.log(nopeople + " people")
-        console.log(occasion)
+        // setIsDisabled(false);
+
+
+        const formData = {
+            firstname: firstname,
+            lastname: lastname,
+            email: email,
+            phonenumber: phonenumber,
+            date: date,
+            time: time,
+            occasion: occasion,
+            nopeople: nopeople
+        }
+
+        // console.log(formData)
+
+        const submitForm = (formdata) => {
+            if (submitAPI(formdata)) {
+                navigate("/ConfirmedReservation")
+                console.log("form submitted")
+                setSubmissionFailed(false)
+            } else {
+                console.log("form not submitted")
+                setSubmissionFailed(true)
+
+
+            }
+        }
+
+        submitForm(formData);
+    }
+
+
+    const handleValidation = () => {
+        if (
+            firstname === "" ||
+            lastname === "" ||
+            email === "" ||
+            phonenumber === "" ||
+            date === "" ||
+            time === "" ||
+            time === "Time" ||
+            occasion === "" ||
+            occasion === "Occasion" ||
+            nopeople === ""
+
+        ) {
+            return false
+        } else {
+            return true
+        }
 
     }
+    useEffect(() => {
+        setIsDisabled(handleValidation());
+    }, [firstname, lastname, email, phonenumber, date, time, occasion, nopeople]);
+
+
+    // useEffect(() => {
+    //     const formData = {
+    //         firstname: firstname,
+    //         lastname: lastname,
+    //         email: email,
+    //         phonenumber: phonenumber,
+    //         date: date,
+    //         time: time,
+    //         occasion: occasion,
+    //         nopeople: nopeople
+    //     }
+    //     console.log(formData)
+    //
+    //
+    // }, [handleSubmit]);
+
+
+    // const submitForm = (formdata) => {
+    //     if (submitAPI(formdata)) {
+    //         console.log("form submitted")
+    //         navigate("/ConfirmedReservation")
+    //
+    //     }
+    // }
+
 
     return (<div className={"reservecontainer"}>
         <h1>Reserve a table</h1>
@@ -84,7 +162,8 @@ export default function ReservationForm({availabletimes}) {
                         value={time}
                         required={true}
                         onChange={(e) => setTime(e.target.value)}>
-                    <AvailableTimes availabletimes={availabletimes} date={date}/>
+                    <option>Time</option>
+                    <AvailableTimes date={date}/>
                 </select>
 
                 <label htmlFor={"occasion"}>Occasion</label>
@@ -92,7 +171,7 @@ export default function ReservationForm({availabletimes}) {
                         value={occasion}
                         required={true}
                         onChange={(e) => setOccasion(e.target.value)}>
-                    <option>Normal</option>
+                    <option>Occasion</option>
                     <option>Birthday</option>
                     <option>Business</option>
                     <option>Other</option>
@@ -101,7 +180,7 @@ export default function ReservationForm({availabletimes}) {
                 <label htmlFor={"lastname"}>Last name</label>
                 <input id={"lastname"}
                        type={"text"}
-                       placeholder={"Last name"}
+                       placeholder="Last name"
                        value={lastname}
                        required={true}
                        onChange={(e) => setLastname(e.target.value)}/>
@@ -109,10 +188,10 @@ export default function ReservationForm({availabletimes}) {
                 <label htmlFor={"phonenumber"}>Phone number</label>
                 <input id={"phonenumber"}
                        type={"number"}
-                       placeholder={"Phone number"}
+                       placeholder="Phone number"
                        min={"0"}
                        required={true}
-                       title={"Phone number must be 10 digits"}
+                       title="Phone number must be 10 digits"
                        value={phonenumber}
                        onChange={(e) => setPhonenumber(e.target.value)}/>
             </div>
@@ -120,16 +199,30 @@ export default function ReservationForm({availabletimes}) {
             <div className={"row3"}>
                 <img src={"./restaurant.jpg"}
                      alt={"seats"}
-                     height={"230px"}/>
+                     height={"300px"}/>
             </div>
+
+
             <button type={"submit"}
                     className={"yellowbutton"}
                     disabled={!isDisabled}
+                    onClick={() => {
+                    }}
             >Reserve
             </button>
 
+
         </form>
-        <button onClick={() => {console.log(date)}}> date testtt</button>
-        <button onClick={() => {console.log(new Date(date).getDay())}}> date test 2</button>
+        {submissionFailed && <p className={"error"}>Form not submitted, try again</p>}
+
+        {/*<button onClick={() => {*/}
+        {/*    console.log(date)*/}
+        {/*}}> date testtt*/}
+        {/*</button>*/}
+        {/*<button onClick={() => {*/}
+        {/*    console.log(new Date(date).getDay())*/}
+        {/*}}> date test 2*/}
+        {/*</button>*/}
+
     </div>)
 }

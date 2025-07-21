@@ -2,6 +2,12 @@ import {fireEvent, render, screen} from "@testing-library/react";
 import ReservationForm from "./components/ReservationForm";
 import userEvent from '@testing-library/user-event'
 
+const mockUsedNavigate = jest.fn();
+jest.mock('react-router-dom', () => ({
+    ...jest.requireActual('react-router-dom'),
+    useNavigate: () => mockUsedNavigate,
+}));
+
 test('Rendering of the reservationform heading', () => {
     render(<ReservationForm/>);
     const headingElement = screen.getByText("Reserve a table");
@@ -28,7 +34,7 @@ test('form submition', async () => {
     fireEvent.change(date, {target: {value: "2025-07-22"}});
     // fireEvent.change(time, {target: {value: "10:00"}});
 
-    await userEvent.selectOptions(time, ['10:00'])
+    await userEvent.selectOptions(time, ['17:00'])
 
 
     fireEvent.change(guests, {target: {value: "2"}});
@@ -39,7 +45,7 @@ test('form submition', async () => {
     fireEvent.change(phonenumber, {target: {value: "123456789"}});
 
     expect(submitbutton).toBeEnabled();
-    expect(time).toHaveValue("10:00");
+    expect(time).toHaveValue("17:00");
     expect(date).toHaveValue("2025-07-22")
     expect(guests).toHaveValue(2)
     expect(occastion).toHaveValue("Birthday");
@@ -51,6 +57,5 @@ test('form submition', async () => {
 
     fireEvent.click(submitbutton);
 
-    expect(submitbutton).toBeDisabled();
 
 });

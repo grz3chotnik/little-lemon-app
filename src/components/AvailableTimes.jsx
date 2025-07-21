@@ -1,34 +1,22 @@
 import {useEffect, useState} from "react";
+import {fetchAPI, submitAPI} from "./Api";
 
-export default function AvailableTimes({availabletimes, date}) {
-
-    // const [availableTimes, setAvailableTimes] = useState(
-    //     ["10:00", "12:00", "14:00", "16:00", "18:00"])
+export default function AvailableTimes({date}) {
 
 
-    // useEffect(() => {
-    //     fetch("https://raw.githubusercontent.com/courseraap/capstone/main/api.js")
-    //         .then(response => response.json())
-    //         .then(data => )
-    // }, []);
+    const [availableTimes, setAvailableTimes] = useState([]);
 
 
-let currentdate = new Date(date);
+    useEffect(() => {
+        let timesArray = fetchAPI(date);
+        setAvailableTimes(timesArray)
+            console.log(timesArray);
+    }, [date])
 
 
-    if (currentdate.getDay() === 5 || 6) {
-        return [
-            <option>10:00</option>,
-            <option>11:00</option>,
-            <option>12:00</option>,
-            <option>13:00</option>,
-            <option>14:00</option>,
-            <option>15:00</option>,
-        ];
 
-    }
-    return (availabletimes?.map((hour) => {
-        return <option>{hour}</option>
+    return (availableTimes.map((hour) => {
+        return <option key={hour} value={hour}>{hour}</option>
     }))
 
 
