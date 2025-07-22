@@ -49,10 +49,27 @@ export default function Testimonals() {
                     </div>
 
 
+
+
+
                 </div>
 
 
+                <div className={"review"}>
+                    <div className={"rating"}>
+                        <h3>Rating:</h3>
+                        <p>⭐⭐⭐⭐️</p>
+                    </div>
+                    <div className={"person"}>
+                        <img src={"/ev.jpg"} alt={"ev"} height={"100vh"}/>
+                        <h3>John Doe</h3>
+                    </div>
+                    <div className={"comment"}>
+                        <p>bla blablabal bla blab lab lbabla BLABLALBA Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda delectus distinctio et temporibus voluptates. Ab consequatur consequuntur ipsa porro possimus temporibus unde. Consequatur, esse eum eveniet iure odio porro possimus!</p>
+                    </div>
 
+
+                </div>
             </div>
 
 
