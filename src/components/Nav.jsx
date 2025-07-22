@@ -4,7 +4,7 @@ import {BrowserRouter} from 'react-router-dom';
 export default function Nav() {
     return (
 
-        <nav className={"navbar"}>
+        <nav className={"navbar"} aria-label={"navigation bar"}>
             <ul>
                 {/*<li><a href={"#"}><img src={"./Logo.svg"} alt={"logo"} height={"100%"}/></a></li>*/}
                 {/*<li><a href={"#"}>Home</a></li>*/}
@@ -20,7 +20,7 @@ export default function Nav() {
                 {/*<li><a href={"/#about"}>About</a></li>*/}
                 <li><Link to={"/Menu"}>Menu</Link></li>
                 <li><Link to={"/Reservations"}>Reservations</Link></li>
-                <li><Link to={"/Orderonline"}>Order online</Link></li>
+                {/*<li><Link to={"/Orderonline"}>Order online</Link></li>*/}
                 <li><Link to={"/Login"}>Log in</Link></li>
 
 

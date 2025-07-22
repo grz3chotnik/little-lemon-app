@@ -4,19 +4,20 @@ export default function Footer() {
     return (
 
 
-        <footer className={"footer"}>
+        <footer className={"footer"} aria-label={"footer"}>
 
 
 <ul>
-    <li><img src={"./logo2.png"} alt={"logo"} height={"145vh"} className={"footerimgw"}/></li>
+    <li><Link to={"/"}><img src={"./logo2.png"} alt={"logo"} height={"145vh"} className={"footerimgw"}/></Link></li>
 </ul>
             <ul>
 
-                <h3><a>Navigation</a></h3>
+                <h3>Navigation</h3>
                 <li><Link to={"/"}>Home</Link></li>
                 <li><Link to={"/#about"}>About</Link></li>
+                <li><Link to={"/Menu"}>Menu</Link></li>
                 <li><Link to={"/Reservations"} >Reservations</Link></li>
-                <li><Link to={"/Orderonline"}>Order online</Link></li>
+                {/*<li><Link to={"/Orderonline"}>Order online</Link></li>*/}
                 <li><Link to={"/Login"}>Login</Link></li>
 
             </ul>

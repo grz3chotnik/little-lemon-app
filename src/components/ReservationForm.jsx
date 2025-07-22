@@ -61,8 +61,11 @@ export default function ReservationForm({availabletimes}) {
     const handleValidation = () => {
         if (
             firstname === "" ||
+            firstname.match(/[0-9]/)  ||
             lastname === "" ||
+            lastname.match(/[0-9]/)  ||
             email === "" ||
+            !email.includes("@") ||
             phonenumber === "" ||
             date === "" ||
             time === "" ||
@@ -109,10 +112,11 @@ export default function ReservationForm({availabletimes}) {
     // }
 
 
-    return (<div className={"reservecontainer"}>
+    return (<div className="reservecontainer">
         <h1>Reserve a table</h1>
-        <form className={"reservelayout"}
-              onSubmit={handleSubmit}>
+        <form className="reservelayout"
+              onSubmit={handleSubmit}
+        aria-label="Reserve a table form">
             <div className={"row1"}>
                 <label htmlFor={"date"}>Date</label>
                 <input id={"date"}
@@ -198,7 +202,7 @@ export default function ReservationForm({availabletimes}) {
 
             <div className={"row3"}>
                 <img src={"./restaurant.jpg"}
-                     alt={"seats"}
+                     alt={"Image of a steak"}
                      height={"300px"}/>
             </div>
 
@@ -207,22 +211,17 @@ export default function ReservationForm({availabletimes}) {
                     className={"yellowbutton"}
                     disabled={!isDisabled}
                     onClick={() => {
+
                     }}
+                    aria-label="Reserve"
             >Reserve
             </button>
 
 
         </form>
-        {submissionFailed && <p className={"error"}>Form not submitted, try again</p>}
+        {submissionFailed && <p className={"error"}>Error, please try again</p>}
 
-        {/*<button onClick={() => {*/}
-        {/*    console.log(date)*/}
-        {/*}}> date testtt*/}
-        {/*</button>*/}
-        {/*<button onClick={() => {*/}
-        {/*    console.log(new Date(date).getDay())*/}
-        {/*}}> date test 2*/}
-        {/*</button>*/}
+
 
     </div>)
 }

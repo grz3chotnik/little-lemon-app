@@ -1,5 +1,6 @@
 import Nav from "./Nav";
 import Footer from "./Footer";
+import {Link} from "react-router-dom";
 
 export default function Login () {
     return (
@@ -14,7 +15,7 @@ export default function Login () {
                 <label><input/>E-mail</label>
                 <label><input/>Password</label>
                 <a href={"/reset"}>Forgot password?</a>
-                <button className={"yellowbutton"}>Log In</button>
+                <Link to={"/loggedin"}><button className={"yellowbutton"}>Log In</button></Link>
 
 
             </div>

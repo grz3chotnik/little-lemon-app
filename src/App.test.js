@@ -31,12 +31,11 @@ test('form submition', async () => {
     const email = screen.getByRole("textbox", {name: "E-mail"})
     const phonenumber = screen.getByRole("spinbutton", {name: "Phone number"})
 
-    fireEvent.change(date, {target: {value: "2025-07-22"}});
     // fireEvent.change(time, {target: {value: "10:00"}});
+    expect(submitbutton).toBeDisabled();
 
+    fireEvent.change(date, {target: {value: "2025-07-22"}});
     await userEvent.selectOptions(time, ['17:00'])
-
-
     fireEvent.change(guests, {target: {value: "2"}});
     fireEvent.change(occastion, {target: {value: "Birthday"}});
     fireEvent.change(firstname, {target: {value: "John"}});
@@ -53,9 +52,16 @@ test('form submition', async () => {
     expect(lastname).toHaveValue("Doe");
     expect(email).toHaveValue("bruh@gmail.com")
     expect(phonenumber).toHaveValue(123456789)
+    expect(submitbutton).toBeEnabled();
 
 
+    expect(submitbutton).toBeEnabled();
     fireEvent.click(submitbutton);
+
+    const error = screen.getByText("Error, please try again")
+
+    expect(error).toBeInTheDocument();
+
 
 
 });

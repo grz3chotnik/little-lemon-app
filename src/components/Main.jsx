@@ -77,7 +77,7 @@ export default function Main() {
                         <p>$5.00</p>
                         <p>desc desc desc descdesc desc desc descdesc desc desc descdesc desc desc descdesc desc desc
                             descdesc desc desc desc</p>
-                        <button className={"blackbutton"}>order a delivery</button>
+                        <button className={"blackbutton"} >order a delivery</button>
                     </div>
                 </div>
 
