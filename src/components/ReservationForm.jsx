@@ -20,7 +20,7 @@ export default function ReservationForm({availabletimes}) {
 
     const [submissionFailed, setSubmissionFailed] = useState(false);
 
-    const [isDisabled, setIsDisabled] = useState(true);
+    const [isDisabled, setIsDisabled] = useState(false);
 
 
     const handleSubmit = (e) => {
@@ -57,6 +57,8 @@ export default function ReservationForm({availabletimes}) {
         submitForm(formData);
     }
 
+const [isFormCorrect, setIsFormCorrect] = useState(true);
+
 
     const handleValidation = () => {
         if (
@@ -75,9 +77,12 @@ export default function ReservationForm({availabletimes}) {
             nopeople === ""
 
         ) {
+
             return false
         } else {
             return true
+
+
         }
 
     }
@@ -86,30 +91,6 @@ export default function ReservationForm({availabletimes}) {
     }, [firstname, lastname, email, phonenumber, date, time, occasion, nopeople]);
 
 
-    // useEffect(() => {
-    //     const formData = {
-    //         firstname: firstname,
-    //         lastname: lastname,
-    //         email: email,
-    //         phonenumber: phonenumber,
-    //         date: date,
-    //         time: time,
-    //         occasion: occasion,
-    //         nopeople: nopeople
-    //     }
-    //     console.log(formData)
-    //
-    //
-    // }, [handleSubmit]);
-
-
-    // const submitForm = (formdata) => {
-    //     if (submitAPI(formdata)) {
-    //         console.log("form submitted")
-    //         navigate("/ConfirmedReservation")
-    //
-    //     }
-    // }
 
 
     return (<div className="reservecontainer">
@@ -117,7 +98,9 @@ export default function ReservationForm({availabletimes}) {
         <form className="reservelayout"
               onSubmit={handleSubmit}
         aria-label="Reserve a table form">
+
             <div className={"row1"}>
+
                 <label htmlFor={"date"}>Date</label>
                 <input id={"date"}
                        type={"date"}
@@ -212,13 +195,17 @@ export default function ReservationForm({availabletimes}) {
                     disabled={!isDisabled}
                     onClick={() => {
 
+                        setIsFormCorrect(false)
+
                     }}
                     aria-label="Reserve"
             >Reserve
             </button>
 
 
+
         </form>
+        {/*{!isFormCorrect &&  <p className={"error"}>Please, fill all of the form fields</p>}*/}
         {submissionFailed && <p className={"error"}>Error, please try again</p>}
 
 

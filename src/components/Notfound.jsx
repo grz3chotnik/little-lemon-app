@@ -4,11 +4,15 @@ import Footer from "./Footer";
 
 export default function Notfound() {
     return (
-        <div>
+
+        <>
             <Nav/>
+            <div className={"notfound"}>
             <h1>PAGE NOT FOUND :(</h1>
-            <Link to={"/"}><h3> ---> Go back Home</h3></Link>
+            <Link to={"/"}><button className={"yellowbutton"}> -> Go back Home</button></Link>
 
         </div>
+            <Footer/>
+        </>
     )
 }

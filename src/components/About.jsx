@@ -13,9 +13,10 @@ export default function About() {
                     Atque doloribus ducimus, eius explicabo facere molestias nostrum optio.
                 </p>
             </div>
-            <img id={"mike1"} src={"/mike.png"} alt={"ev"} height={"430vh"}/>
-            <img id={"mike2"} src={"/mike2.png"} alt={"ev"} height={"450vh"}/>
-        </div>
+             <img id={"mike1"} src={"/mike.png"} alt={"ev"} />
+                <img id={"mike2"} src={"/mike2.png"} alt={"ev"}  />
+
+                   </div>
 
     )
 

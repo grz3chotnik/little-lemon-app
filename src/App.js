@@ -10,6 +10,7 @@ import Login from "./components/Login";
 import Orderonline from "./components/Orderonline";
 import Aboutpage from "./components/Aboutpage";
 import ConfirmedReservation from "./components/ConfirmedReservation";
+import ConfirmedLogin from "./components/ConfirmedLogin";
 
 function App() {
 
@@ -28,6 +29,7 @@ function App() {
                 <Route path="/Login" element={<Login/>}></Route>
                 <Route path={"*"} element={<Notfound/>}></Route>
                 <Route path={"/ConfirmedReservation"} element={<ConfirmedReservation/>}></Route>
+                <Route path={"/ConfirmedLogin"} element={<ConfirmedLogin/>}></Route>
             </Routes>
         </>
 
