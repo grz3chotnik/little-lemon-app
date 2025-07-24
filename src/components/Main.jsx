@@ -42,7 +42,7 @@ export default function Main() {
                 <h1>This week's specials</h1>
 
                 <div>
-                    <Link to={"/Orderonline"}>
+                    <Link to={"/Menu"}>
                         <button className={"yellowbutton"}>Online menu</button>
                     </Link>
                 </div>
