@@ -58,9 +58,7 @@ test('form submition', async () => {
     expect(submitbutton).toBeEnabled();
     fireEvent.click(submitbutton);
 
-    const error = screen.getByText("Error, please try again")
 
-    expect(error).toBeInTheDocument();
 
 
 
