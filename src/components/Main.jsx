@@ -54,8 +54,7 @@ export default function Main() {
                     <img src={"./greek_salad.jpg"} alt={"greek salad"} className={"cardimg"}/>
                     <div className={"carddescription"}><h3>Greek Salad</h3>
                         <p>$12.99</p>
-                        <p>desc desc desc descdesc desc desc descdesc desc desc descdesc desc desc descdesc desc desc
-                            descdesc desc desc desc</p>
+                        <p>Crisp veggies, feta, and olives in a light olive oil dressing.</p>
                         <Link to={"/Order"}><button className={"blackbutton"}>order a delivery</button></Link>
                     </div>
                 </div>
@@ -64,20 +63,18 @@ export default function Main() {
                     <img src={"./lemon_dessert.png"} alt={"greek salad"} className={"cardimg"}/>
                     <div className={"carddescription"}><h3>Lemon dessert</h3>
                         <p>$5.99</p>
-                        <p>desc desc desc descdesc desc desc descdesc desc desc descdesc desc desc descdesc desc desc
-                            descdesc desc desc desc</p>
-                        <button className={"blackbutton"}>order a delivery</button>
+                        <p>A delightful blend of tangy lemon and sweet, fluffy goodness.</p>
+                        <Link to={"/Order"}><button className={"blackbutton"}>order a delivery</button></Link>
                     </div>
                 </div>
 
                 <div className={"card"}>
-                    <img src={"./restauranfood.jpg"} alt={"greek salad"} className={"cardimg"}/>
+                    <img src={"./bruschetta.png"} alt={"bruschetta"} className={"cardimg"}/>
                     <div className={"carddescription"}>
                         <h3>Bruchetta</h3>
                         <p>$5.00</p>
-                        <p>desc desc desc descdesc desc desc descdesc desc desc descdesc desc desc descdesc desc desc
-                            descdesc desc desc desc</p>
-                        <button className={"blackbutton"} >order a delivery</button>
+                        <p>Toasted bread with fresh tomatoes, garlic, basil, and olive oil.</p>
+                        <Link to={"/Order"}><button className={"blackbutton"}>order a delivery</button></Link>
                     </div>
                 </div>
 

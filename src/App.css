@@ -436,6 +436,9 @@ p {
 .about h1, .about p, .about h2 {
     color: black;
 }
+.about p {
+    margin-right: 25px;
+}
 
 .about h2 {
     font-size: 40px;
@@ -481,6 +484,7 @@ transition: 0.2s;
 #Menu {
     display: flex;
     flex-direction: column;
+
 }
 
 #MenuImg {
@@ -489,6 +493,7 @@ transition: 0.2s;
     width: 40%;
     padding: 0;
     flex-wrap: wrap;
+
 }
 
 
